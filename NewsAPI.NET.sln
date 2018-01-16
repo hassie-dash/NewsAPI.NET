@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1EC615E4-8E49-4DAF-BF8E-3F82C3A583AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hassie.API.NewsAPI", "Hassie.API.NewsAPI\Hassie.API.NewsAPI.csproj", "{06280E10-1047-44B7-994E-F68481B044A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hassie.NET.API.NewsAPI", "Hassie.API.NewsAPI\Hassie.NET.API.NewsAPI.csproj", "{06280E10-1047-44B7-994E-F68481B044A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

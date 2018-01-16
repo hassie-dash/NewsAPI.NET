@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Hassie.API.NewsAPI.API.v2;
-using Hassie.API.NewsAPI.Models;
+using Hassie.NET.API.NewsAPI.API.v2;
+using Hassie.NET.API.NewsAPI.Models;
 using System.Net.Http;
-using Hassie.API.NewsAPI.Exceptions;
+using Hassie.NET.API.NewsAPI.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Hassie.API.NewsAPI.Client
+namespace Hassie.NET.API.NewsAPI.Client
 {
     internal class NewsClient : INewsClient
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hassie.API.NewsAPI.Models
+namespace Hassie.NET.API.NewsAPI.Models
 {
     public interface INewsArticles
     {

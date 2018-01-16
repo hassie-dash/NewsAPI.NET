@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 
-namespace Hassie.API.NewsAPI.Exceptions
+namespace Hassie.NET.API.NewsAPI.Exceptions
 {
     public class NewsHTTPException : Exception
     {

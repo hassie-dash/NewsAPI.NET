@@ -1,11 +1,11 @@
-﻿using Hassie.API.NewsAPI.Exceptions;
+﻿using Hassie.NET.API.NewsAPI.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hassie.API.NewsAPI.Models
+namespace Hassie.NET.API.NewsAPI.Models
 {
     internal class NewsArticles : INewsArticles
     {

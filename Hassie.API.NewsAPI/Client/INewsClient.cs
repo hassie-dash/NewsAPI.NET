@@ -1,11 +1,11 @@
-﻿using Hassie.API.NewsAPI.API.v2;
-using Hassie.API.NewsAPI.Models;
+﻿using Hassie.NET.API.NewsAPI.API.v2;
+using Hassie.NET.API.NewsAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hassie.API.NewsAPI.Client
+namespace Hassie.NET.API.NewsAPI.Client
 {
     public interface INewsClient
     {

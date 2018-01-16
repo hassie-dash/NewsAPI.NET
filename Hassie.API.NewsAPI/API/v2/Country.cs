@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Hassie.API.NewsAPI.API.v2
+namespace Hassie.NET.API.NewsAPI.API.v2
 {
     public enum Country
     {
