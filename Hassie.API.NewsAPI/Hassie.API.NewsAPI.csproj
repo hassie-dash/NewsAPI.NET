@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.1</TargetFramework>
+    <Authors>Hassie</Authors>
+    <Company />
+    <Product>NewsAPI.NET</Product>
+    <Copyright>©2018 Hassie.</Copyright>
+    <Description>News API wrapper for .NET, written in .NET Standard 1.1.</Description>
+    <PackageProjectUrl></PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/master/LICENSE.MD</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageTags>news;api;hassie;hassie-dash</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <Title>NewsAPI.NET</Title>
+    <Description>A simple to use library to retrieve news from News API; written in .NET Standard 1.1.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
