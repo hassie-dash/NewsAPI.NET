@@ -6,10 +6,10 @@
     <Company />
     <Product>NewsAPI.NET</Product>
     <Copyright>©2018 Hassie.</Copyright>
-    <Description>News API wrapper for .NET, written in .NET Standard 1.1.</Description>
+    <Description>News API wrapper for .NET, written in .NET Standard 1.1</Description>
     <PackageProjectUrl></PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/master/LICENSE.MD</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
