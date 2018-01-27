@@ -8,6 +8,7 @@ using System.Net.Http;
 using Hassie.NET.API.NewsAPI.Exceptions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace Hassie.NET.API.NewsAPI.Client
 {
@@ -125,17 +126,31 @@ namespace Hassie.NET.API.NewsAPI.Client
             {
                 using(HttpClient httpClient = new HttpClient())
                 {
-                    JObject json = JObject.Parse(await httpClient.GetStringAsync(url));
-                    return new NewsArticles(json);
+                    // Get response from API.
+                    HttpResponseMessage response = await httpClient.GetAsync(url);
+
+                    // Check status code.
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Success, parse json.
+                        JObject json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                        return new NewsArticles(json);
+                    }
+                    else
+                    {
+                        // Parse error json and throw exception.
+                        JObject json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                        throw new NewsHTTPException($"News API HTTP Exception - {json["code"]}: {json["message"]}");
+                    }
                 }
             }
             catch (HttpRequestException e1)
             {
-                throw new NewsHTTPException("News API HTTP Exception - Failed to download JSON:", e1);
+                throw new NewsHTTPException("News API HTTP Exception - Failed to download JSON", e1);
             }
             catch (JsonException e2)
             {
-                throw new NewsJSONException("News API JSON Exception - Failed to parse JSON:", e2);
+                throw new NewsJSONException("News API JSON Exception - Failed to parse JSON", e2);
             }
         }
     }

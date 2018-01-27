@@ -7,18 +7,19 @@
     <Product>NewsAPI.NET</Product>
     <Copyright>©2018 Hassie.</Copyright>
     <Description>News API wrapper for .NET, written in .NET Standard 1.1</Description>
-    <PackageProjectUrl></PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/hassie-dash/NewsAPI.NET</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageReleaseNotes>HTTP request exceptions now more meaningful - News API responses are now parsed and thrown.</PackageReleaseNotes>
     <PackageTags>news;api;hassie;hassie-dash</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
     <NeutralLanguage>en-GB</NeutralLanguage>
     <Title>NewsAPI.NET</Title>
-    <Description>A simple to use library to retrieve news from News API; written in .NET Standard 1.1.</Description>
+    <Description>A simple to use async library to retrieve news from News API; written in .NET Standard 1.1.</Description>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
