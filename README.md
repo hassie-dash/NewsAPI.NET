@@ -1,5 +1,7 @@
 NewsAPI.NET
 ===========
+[![Build Status](https://travis-ci.org/hassie-dash/NewsAPI.NET.svg?branch=master)](https://travis-ci.org/hassie-dash/NewsAPI.NET)
+
 NewsAPI.NET is a asynchronous API wrapper around News API. It is based on their new v2 API and is a work in progress. At the moment, only the top headlines endpoint has been implemented.
 It is written in NET Standard 1.1.
 
