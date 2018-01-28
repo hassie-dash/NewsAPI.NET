@@ -1,8 +1,7 @@
 language: csharp
 solution: NewsAPI.NET.sln
 
-matrix:
-  include:
-    - dotnet: 2.1.4
-      mono: none
-    - mono: latest
+mono: none
+dotnet: 2.1.4
+script:
+ - dotnet restore
