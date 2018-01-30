@@ -93,15 +93,15 @@ namespace Hassie.NET.API.NewsAPI.Client
         /// <param name="sources">The sources to retrieve news articles from.</param>
         /// <exception cref="Exceptions.NewsHTTPException"></exception>
         /// <exception cref="Exceptions.NewsJSONException"></exception>
-        Task<INewsArticles> GetTopHeadlines(Source[] sources);
+        Task<INewsArticles> GetTopHeadlines(params Source[] sources);
 
         /// <summary>
         /// Gets top news articles for the provided sources with a search query.
         /// </summary>
-        /// <param name="sources">The sources to retrieve news articles from.</param>
         /// <param name="query">The topic to retrieve news about.</param>
+        /// <param name="sources">The sources to retrieve news articles from.</param>
         /// <exception cref="Exceptions.NewsHTTPException"></exception>
         /// <exception cref="Exceptions.NewsJSONException"></exception>
-        Task<INewsArticles> GetTopHeadlines(Source[] sources, string query);
+        Task<INewsArticles> GetTopHeadlines(string query, params Source[] sources);
     }
 }
