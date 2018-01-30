@@ -24,54 +24,54 @@ namespace Hassie.NET.API.NewsAPI.Client
         public async Task<INewsArticles> GetTopHeadlines(Category category)
         {
             string queryURL = $"top-headlines?category={category.ToString().ToLower()}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Category category, Country country)
         {
             string queryURL = $"top-headlines?category={category.ToString().ToLower()}&country={country.ToString().ToLower()}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Category category, string query)
         {
             query = query.Replace(" ", "%20");
             string queryURL = $"top-headlines?category={category.ToString().ToLower()}&q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Category category, Country country, string query)
         {
             query = query.Replace(" ", "%20");
             string queryURL = $"top-headlines?category={category.ToString().ToLower()}&country={country.ToString().ToLower()}&q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Country country)
         {
             string queryURL = $"top-headlines?country={country.ToString().ToLower()}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Country country, string query)
         {
             query = query.Replace(" ", "%20");
             string queryURL = $"top-headlines?country={country.ToString().ToLower()}&q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(string query)
         {
             query = query.Replace(" ", "%20");
             string queryURL = $"top-headlines?q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Source source)
         {
             string sourceString = source.ToString().ToLower().Replace('_', '-');
             string queryURL = $"top-headlines?source={sourceString}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(Source source, string query)
@@ -79,7 +79,7 @@ namespace Hassie.NET.API.NewsAPI.Client
             query = query.Replace(" ", "%20");
             string sourceString = source.ToString().ToLower().Replace('_', '-');
             string queryURL = $"top-headlines?source={sourceString}&q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(params Source[] sources)
@@ -97,7 +97,7 @@ namespace Hassie.NET.API.NewsAPI.Client
                 }
             }
             string queryURL = $"top-headlines?source={sourcesString}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
         public async Task<INewsArticles> GetTopHeadlines(string query, params Source[] sources)
@@ -116,10 +116,10 @@ namespace Hassie.NET.API.NewsAPI.Client
             }
             query = query.Replace(" ", "%20");
             string queryURL = $"top-headlines?source={sourcesString}&q={query}";
-            return await DownloadNewsArticles(queryURL);
+            return await GetNewsArticles(queryURL);
         }
 
-        public async Task<INewsArticles> DownloadNewsArticles(string query)
+        private async Task<INewsArticles> GetNewsArticles(string query)
         {
             string url = "https://newsapi.org/v2/" + $"{query}&apiKey={apiKey}";
             try
