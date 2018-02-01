@@ -34,7 +34,7 @@ namespace Hassie.NET.API.NewsAPI.Models
             }
             catch (JsonException e)
             {
-                throw new NewsJSONException("News API JSON Exception - Failed to extract JSON:", e);
+                throw new NewsJSONException("News API JSON Exception - Failed to extract JSON", e);
             }
         }
 
