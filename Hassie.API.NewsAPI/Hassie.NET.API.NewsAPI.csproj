@@ -12,14 +12,17 @@
     <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>HTTP request exceptions now more meaningful - News API responses are now parsed and thrown.</PackageReleaseNotes>
+    <PackageReleaseNotes>Rewrote API wrapper to use builder pattern.
+Implemented Sources endpoint.
+Please refer to documentation to see the updated example usages.</PackageReleaseNotes>
     <PackageTags>news;api;hassie;hassie-dash</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <NeutralLanguage>en-GB</NeutralLanguage>
     <Title>NewsAPI.NET</Title>
     <Description>A simple to use async library to retrieve news from News API; written in .NET Standard 1.1.</Description>
-    <Version>1.0.2</Version>
+    <Version>2.0.0</Version>
+    <FileVersion>2.0.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
