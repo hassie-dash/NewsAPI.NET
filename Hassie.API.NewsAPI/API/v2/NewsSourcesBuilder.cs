@@ -49,7 +49,7 @@ namespace Hassie.NET.API.NewsAPI.API.v2
                 query.Add("language", mLanguage.ToString().ToLower());
             }
 
-            mQuery = new UriBuilder("https://newsapi.org/v2/sources?")
+            mQuery = new UriBuilder("https://newsapi.org/v2/sources")
             {
                 Query = query.ToString()
             };

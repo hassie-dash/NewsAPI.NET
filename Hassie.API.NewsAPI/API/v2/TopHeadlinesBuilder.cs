@@ -74,7 +74,7 @@ namespace Hassie.NET.API.NewsAPI.API.v2
                 query.Add("sources", String.Join(",", mSources).Replace('_', '-'));
             }
 
-            mQuery = new UriBuilder("https://newsapi.org/v2/top-headlines?")
+            mQuery = new UriBuilder("https://newsapi.org/v2/top-headlines")
             {
                 Query = query.ToString()
             };

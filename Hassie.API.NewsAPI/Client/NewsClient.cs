@@ -20,7 +20,7 @@ namespace Hassie.NET.API.NewsAPI.Client
 
         public async Task<INewsArticles> GetTopHeadlines()
         {
-            return new NewsArticles(await GetResponse(String.Concat(new TopHeadlinesBuilder().Build().ToString(), "apiKey=", apiKey)));
+            return new NewsArticles(await GetResponse(String.Concat(new TopHeadlinesBuilder().Build().ToString(), "?apiKey=", apiKey)));
         }
 
         public async Task<INewsArticles> GetTopHeadlines(TopHeadlinesBuilder query)
@@ -30,7 +30,7 @@ namespace Hassie.NET.API.NewsAPI.Client
 
         public async Task<INewsSources> GetNewsSources()
         {
-            return new NewsSources(await GetResponse(String.Concat(new NewsSourcesBuilder().Build().ToString(), "apiKey=", apiKey)));
+            return new NewsSources(await GetResponse(String.Concat(new NewsSourcesBuilder().Build().ToString(), "?apiKey=", apiKey)));
         }
 
         public async Task<INewsSources> GetNewsSources(NewsSourcesBuilder query)
