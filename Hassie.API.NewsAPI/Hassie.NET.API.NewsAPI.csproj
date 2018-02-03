@@ -9,20 +9,24 @@
     <Description>News API wrapper for .NET, written in .NET Standard 1.1</Description>
     <PackageProjectUrl>https://github.com/hassie-dash/NewsAPI.NET</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/hassie-dash/NewsAPI.NET/v2.0.1/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Rewrote API wrapper to use builder pattern.
-Implemented Sources endpoint.
-Please refer to documentation to see the updated example usages.</PackageReleaseNotes>
+    <PackageReleaseNotes>Version 2.0.1
+* Bug fixes.
+
+Version 2.0.0
+* Rewrote API wraper to use builder pattern.
+* Implemented Sources endpoint.
+* Please refer to documentation to see the updated example usages.</PackageReleaseNotes>
     <PackageTags>news;api;hassie;hassie-dash</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.1.0</AssemblyVersion>
     <NeutralLanguage>en-GB</NeutralLanguage>
     <Title>NewsAPI.NET</Title>
     <Description>A simple to use async library to retrieve news from News API; written in .NET Standard 1.1.</Description>
-    <Version>2.0.0</Version>
-    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.1</Version>
+    <FileVersion>2.0.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
