@@ -24,7 +24,7 @@ INewsArticles newsArticles = await newsClient.GetTopHeadlines(new TopHeadlinesBu
 	.WithSourcesQuery(Source.BBC_NEWS, Source.BBC_SPORT)
 	.Build());
 
-foreach (INewsArticle article in newsArticles.Articles)
+foreach (INewsArticle article in newsArticles)
 {
 	Console.WriteLine(article.Author);
 	Console.WriteLine(article.Description);
