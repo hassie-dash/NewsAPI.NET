@@ -7,7 +7,7 @@ It is written in NET Standard 1.1.
 
 NuGet
 -----
-This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.0.0.
+This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.1.0.
 
 Example usage
 -------------
