@@ -7,10 +7,8 @@ using System.Text;
 
 namespace Hassie.NET.API.NewsAPI.Models
 {
-    internal class NewsSources : INewsSources
+    internal class NewsSources : List<INewsSource>, INewsSources
     {
-        private List<INewsSource> mSources = new List<INewsSource>();
-
         public NewsSources(JObject json)
         {
             try
@@ -31,7 +29,7 @@ namespace Hassie.NET.API.NewsAPI.Models
 
                     INewsSource newsSource = new NewsSource(category, country, description, id, language, name, url);
 
-                    mSources.Add(newsSource);
+                    Add(newsSource);
                 }
             }
             catch (JsonException e)
@@ -39,7 +37,5 @@ namespace Hassie.NET.API.NewsAPI.Models
                 throw new NewsJSONException("News API JSON Exception - Failed to extract JSON", e);
             }
         }
-
-        public List<INewsSource> Sources => mSources;
     }
 }

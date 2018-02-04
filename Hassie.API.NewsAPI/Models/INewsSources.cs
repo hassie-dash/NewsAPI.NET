@@ -4,8 +4,5 @@ using System.Text;
 
 namespace Hassie.NET.API.NewsAPI.Models
 {
-    public interface INewsSources
-    {
-        List<INewsSource> Sources { get; }
-    }
+    public interface INewsSources : IReadOnlyList<INewsSource> { }
 }
