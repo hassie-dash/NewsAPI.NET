@@ -10,9 +10,10 @@ namespace Hassie.NET.API.NewsAPI.Client
     public interface INewsClient
     {
         /// <summary>
-        /// Returns all top headlines.
+        /// Returns all headlines using the provided query.
         /// </summary>
-        Task<INewsArticles> GetTopHeadlines();
+        /// <param name="query">The query to be provided with the request.</param>
+        Task<INewsArticles> GetEverything(EverythingBuilder query);
 
         /// <summary>
         /// Returns top headlines using the provided query.

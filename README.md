@@ -1,13 +1,12 @@
-NewsAPI.NET
+﻿NewsAPI.NET
 ===========
 [![Build Status](https://travis-ci.org/hassie-dash/NewsAPI.NET.svg?branch=master)](https://travis-ci.org/hassie-dash/NewsAPI.NET)
 
-NewsAPI.NET is a asynchronous API wrapper around News API. It is based on their new v2 API and is a work in progress. At the moment, the top headlines and news sources endpoint has been implemented.
-It is written in NET Standard 1.1.
+NewsAPI.NET is a asynchronous API wrapper around News API. It is based on their new v2 API and is written in .NET Standard 1.1.
 
 NuGet
 -----
-This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.1.0.
+This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.2.0.
 
 Example usage
 -------------
@@ -16,7 +15,7 @@ INewsClient newsClient = new ClientBuilder()
     {
         ApiKey = "Your API Key";
     }
-	.Build();
+    .Build();
 
 INewsArticles newsArticles = await newsClient.GetTopHeadlines(new TopHeadlinesBuilder()
 	.WithCountryQuery(Country.GB)

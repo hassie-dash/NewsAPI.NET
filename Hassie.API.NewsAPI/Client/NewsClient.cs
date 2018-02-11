@@ -18,9 +18,9 @@ namespace Hassie.NET.API.NewsAPI.Client
             this.apiKey = apiKey;
         }
 
-        public async Task<INewsArticles> GetTopHeadlines()
+        public async Task<INewsArticles> GetEverything(EverythingBuilder query)
         {
-            return new NewsArticles(await GetResponse(String.Concat(new TopHeadlinesBuilder().Build().ToString(), "?apiKey=", apiKey)));
+            return new NewsArticles(await GetResponse(String.Concat(query.ToString(), "&apiKey=", apiKey))); 
         }
 
         public async Task<INewsArticles> GetTopHeadlines(TopHeadlinesBuilder query)
