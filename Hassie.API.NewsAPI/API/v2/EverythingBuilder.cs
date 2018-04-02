@@ -73,7 +73,7 @@ namespace Hassie.NET.API.NewsAPI.API.v2
 
             if (mSearchQuery != null)
             {
-                query.Add("query", mSearchQuery);
+                query.Add("q", mSearchQuery.Replace(" ", "%20"));
             }
 
             if (mSortOrder != null)

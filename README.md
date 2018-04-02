@@ -6,7 +6,7 @@ NewsAPI.NET is a asynchronous API wrapper around News API. It is based on their 
 
 NuGet
 -----
-This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.2.0.
+This library is available on NuGet, under the package name Hassie.NET.API.NewsAPI. The current version is 2.2.1.
 
 Example usage
 -------------

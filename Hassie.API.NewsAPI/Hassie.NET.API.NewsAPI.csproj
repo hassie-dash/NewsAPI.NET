@@ -12,7 +12,10 @@
     <PackageLicenseUrl>https://github.com/hassie-dash/NewsAPI.NET/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/hassie-dash/NewsAPI.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageReleaseNotes>Version 2.2.0
+    <PackageReleaseNotes>Version 2.2.1
+* Fixed bug when adding a search query with a query builder.
+
+Version 2.2.0
 * Implemented Everything endpoint. Note that for the query parameter, you must provide the query in URL encoded format.
 
 Version 2.1.0
@@ -27,12 +30,12 @@ Version 2.0.0
 * Please refer to documentation to see the updated example usages.</PackageReleaseNotes>
     <PackageTags>news;api;hassie;hassie-dash</PackageTags>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.1.0</AssemblyVersion>
     <NeutralLanguage>en-GB</NeutralLanguage>
     <Title>NewsAPI.NET</Title>
     <Description>A simple to use async library to retrieve news from News API; written in .NET Standard 1.1.</Description>
-    <Version>2.2.0</Version>
-    <FileVersion>2.2.0.0</FileVersion>
+    <Version>2.2.1</Version>
+    <FileVersion>2.2.1.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
