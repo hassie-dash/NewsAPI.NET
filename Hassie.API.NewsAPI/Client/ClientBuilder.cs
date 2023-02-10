@@ -1,21 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hassie.NET.API.NewsAPI.Client
+﻿namespace Hassie.NET.API.NewsAPI.Client
 {
-    public class ClientBuilder
-    {
-        private string apiKey;
+    public class ClientOptions
+    {        
+        public string ApiKey { get; set; }
 
-        public string ApiKey
-        {
-            set { apiKey = value; }
-        }
-
-        public INewsClient Build()
-        {
-            return new NewsClient(apiKey);
-        }
+        public string UserAgent { get; set; }
     }
 }
