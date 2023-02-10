@@ -9,57 +9,60 @@ using System.Threading.Tasks;
 
 namespace Hassie.NET.API.NewsAPI.Client
 {
-    internal class NewsClient : INewsClient
+    public class NewsClient : INewsClient
     {
-        private readonly string apiKey;
+        private readonly ClientOptions _clientOptions;
+        private readonly HttpClient _httpClient;
 
-        public NewsClient(string apiKey)
+        public NewsClient(ClientOptions clientOptions,
+                          HttpClient httpClient)
         {
-            this.apiKey = apiKey;
+            _clientOptions = clientOptions;
+            _httpClient = httpClient;
+
+            httpClient.DefaultRequestHeaders.Add("User-Agent", _clientOptions.UserAgent);
         }
 
         public async Task<INewsArticles> GetEverything(EverythingBuilder query)
         {
-            return new NewsArticles(await GetResponse(String.Concat(query.ToString(), "&apiKey=", apiKey))); 
+            return new NewsArticles(await GetResponse(String.Concat(query.ToString(), "&apiKey=", _clientOptions.ApiKey)));
         }
 
         public async Task<INewsArticles> GetTopHeadlines(TopHeadlinesBuilder query)
         {
-            return new NewsArticles(await GetResponse(String.Concat(query.ToString(), "&apiKey=", apiKey)));
+            return new NewsArticles(await GetResponse(String.Concat(query.ToString(), "&apiKey=", _clientOptions.ApiKey)));
         }
 
         public async Task<INewsSources> GetNewsSources()
         {
-            return new NewsSources(await GetResponse(String.Concat(new NewsSourcesBuilder().Build().ToString(), "?apiKey=", apiKey)));
+            return new NewsSources(await GetResponse(String.Concat(new NewsSourcesBuilder().Build().ToString(), "?apiKey=", _clientOptions.ApiKey)));
         }
 
         public async Task<INewsSources> GetNewsSources(NewsSourcesBuilder query)
         {
-            return new NewsSources(await GetResponse(String.Concat(query.ToString(), "&apiKey=", apiKey)));
+            return new NewsSources(await GetResponse(String.Concat(query.ToString(), "&apiKey=", _clientOptions.ApiKey)));
         }
 
         private async Task<JObject> GetResponse(string query)
         {
             try
             {
-                using (HttpClient httpClient = new HttpClient())
-                {
-                    // Get response from API.
-                    HttpResponseMessage response = await httpClient.GetAsync(query);
+                // Get response from API.
+                HttpResponseMessage response = await _httpClient.GetAsync(query);
 
-                    // Check status code.
-                    if (response.IsSuccessStatusCode)
-                    {
-                        // Success, parse json.
-                        return JObject.Parse(await response.Content.ReadAsStringAsync());
-                    }
-                    else
-                    {
-                        // Parse error json and throw exception.
-                        JObject json = JObject.Parse(await response.Content.ReadAsStringAsync());
-                        throw new NewsHTTPException($"News API HTTP Exception - {json["code"]}: {json["message"]}");
-                    }
+                // Check status code.
+                if (response.IsSuccessStatusCode)
+                {
+                    // Success, parse json.
+                    return JObject.Parse(await response.Content.ReadAsStringAsync());
                 }
+                else
+                {
+                    // Parse error json and throw exception.
+                    JObject json = JObject.Parse(await response.Content.ReadAsStringAsync());
+                    throw new NewsHTTPException($"News API HTTP Exception - {json["code"]}: {json["message"]}");
+                }
+
             }
             catch (HttpRequestException e1)
             {
