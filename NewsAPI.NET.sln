@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1EC615E4-8E49-4DAF-BF8E-3F82C3A583AB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hassie.NET.API.NewsAPI", "Hassie.API.NewsAPI\Hassie.NET.API.NewsAPI.csproj", "{06280E10-1047-44B7-994E-F68481B044A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Moises.NET.API.NewsAPI", "Hassie.API.NewsAPI\Moises.NET.API.NewsAPI.csproj", "{06280E10-1047-44B7-994E-F68481B044A6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{15667796-E30F-4563-9A82-939EA7926682}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hassie.NET.API.NewsAPI.DependencyInjection", "Hassie.NET.API.NewsAPI.DependencyInjection\Hassie.NET.API.NewsAPI.DependencyInjection.csproj", "{A9457174-917F-4C4E-94D6-0C91FABAD477}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moises.NET.API.NewsAPI.DependencyInjection", "Hassie.NET.API.NewsAPI.DependencyInjection\Moises.NET.API.NewsAPI.DependencyInjection.csproj", "{A9457174-917F-4C4E-94D6-0C91FABAD477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
